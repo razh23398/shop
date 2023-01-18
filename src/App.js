@@ -1,23 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+
+import NavBar from './components/navBar';
+import About from './components/about';
+import Footer from './components/footer';
+import GameHolder from './components/gameHolder';
+import games from './data/games';
+import Select from 'react-select'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <NavBar />
+    <About />
+    <GameHolder 
+    key="1"
+    name="Action"
+    holderGaner={games.Action.title}
+    />
+    <GameHolder 
+    key="2"
+    name="Kids"
+    holderGaner={games.Kids.title}
+    />
+    <GameHolder 
+    key="3"
+    name="Strategy"
+    holderGaner={games.Strategy.title}
+    />
+    <GameHolder 
+    key="4"
+    name="Sport"
+    holderGaner={games.Sport.title}
+    />
+    <GameHolder 
+    key="5"
+    name="Simulator"
+    holderGaner={games.Simulator.title}
+    />
+    <GameHolder 
+    key="6"
+    name="Adventures"
+    holderGaner={games.Adventures.title}
+    />
+    <Footer />
     </div>
   );
 }
