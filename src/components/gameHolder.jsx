@@ -45,6 +45,30 @@ function GameHolder(props){
                     gamesInCart.push(games.Strategy[i].imgUrl)
                     gamesInCart.push(games.Strategy[i].price)
                 }
+            }else if (event.target.getAttribute("genre") === "Sport" && i == event.target.id){
+                if (gamesInCart.includes(games.Sport[i].title)){
+                    alert("this game is in the cart")
+                }else{
+                    gamesInCart.push(games.Sport[i].title)
+                    gamesInCart.push(games.Sport[i].imgUrl)
+                    gamesInCart.push(games.Sport[i].price)
+                }
+            }else if (event.target.getAttribute("genre") === "Simulator" && i == event.target.id){
+                if (gamesInCart.includes(games.Simulator[i].title)){
+                    alert("this game is in the cart")
+                }else{
+                    gamesInCart.push(games.Simulator[i].title)
+                    gamesInCart.push(games.Simulator[i].imgUrl)
+                    gamesInCart.push(games.Simulator[i].price)
+                }
+            }else if (event.target.getAttribute("genre") === "Adventures" && i == event.target.id){
+                if (gamesInCart.includes(games.Adventures[i].title)){
+                    alert("this game is in the cart")
+                }else{
+                    gamesInCart.push(games.Adventures[i].title)
+                    gamesInCart.push(games.Adventures[i].imgUrl)
+                    gamesInCart.push(games.Adventures[i].price)
+                }
             }
             setCartNumber(gamesInCart.length/3)
         }
